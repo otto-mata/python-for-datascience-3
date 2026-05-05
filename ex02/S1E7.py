@@ -9,6 +9,7 @@ class Baratheon(Character):
     hairs: str
 
     def __init__(self, first_name: str, is_alive: bool = True):
+        """Baratheon class constructor"""
         super().__init__(
             first_name,
             is_alive,
@@ -19,12 +20,15 @@ class Baratheon(Character):
         self.hairs = "dark"
 
     def die(self):
+        """Baratheon class die method"""
         return super().die()
 
     def __repr__(self) -> str:
+        """Baratheon class __repr__ method"""
         return f"Vector: {(self.family_name, self.eyes, self.hairs)}"
 
     def __str__(self) -> str:
+        """Baratheon class __repr__ method"""
         return "coucou"
 
 
@@ -36,6 +40,7 @@ class Lannister(Character):
     hairs: str
 
     def __init__(self, first_name: str, is_alive: bool = True):
+        """Lannister class constructor"""
         super().__init__(
             first_name,
             is_alive,
@@ -46,16 +51,20 @@ class Lannister(Character):
         self.hairs = "light"
 
     def die(self):
+        """Lannister class die method"""
         return super().die()
 
     def __repr__(self) -> str:
+        """Lannister class __repr__ method"""
         return f"Vector: {(self.family_name, self.eyes, self.hairs)}"
 
     def __str__(self) -> str:
+        """Lannister class __str__ method"""
         return "coucou"
 
     @classmethod
     def create_lannister(cls, name: str, is_alive: bool = True):
+        """Create a new instance of the Lannister class"""
         instance = Lannister.__new__(
             cls,
         )
